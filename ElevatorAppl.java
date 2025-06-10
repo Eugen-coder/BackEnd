@@ -12,6 +12,7 @@ import ait.elevator.task.Truck;
 //        - Используется synchronized (monitor), чтобы избежать гонки потоков при обновлении объема элеваторов.
 //Этот код гарантирует, что зерно распределяется равномерно между двумя элеваторами без потерь и с эффективной синхронизацией.
 
+
 public class ElevatorAppl {
     private static final int N_TRUCK = 10_000;
     private static final int N_RACES = 10;
@@ -40,3 +41,5 @@ public class ElevatorAppl {
         System.out.println("Elevator " + elevator2.getName() + " has " + elevator2.getCurrentVolume());
     }
 }
+
+
