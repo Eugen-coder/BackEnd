@@ -3,6 +3,15 @@ package ait.elevator;
 import ait.elevator.task.Elevator;
 import ait.elevator.task.Truck;
 
+//    Что изменилось?
+//        - Добавлен второй элеватор (elevator2).
+//        - Грузовики теперь выгружают зерно в два элеватора:
+//        - Половина зерна идет в elevator1.
+//- Половина зерна идет в elevator2.
+//- Синхронизация:
+//        - Используется synchronized (monitor), чтобы избежать гонки потоков при обновлении объема элеваторов.
+//Этот код гарантирует, что зерно распределяется равномерно между двумя элеваторами без потерь и с эффективной синхронизацией.
+
 public class ElevatorAppl {
     private static final int N_TRUCK = 10_000;
     private static final int N_RACES = 10;
